@@ -12,7 +12,7 @@ pip install playwright aiogram python-dotenv flask
 python -m playwright install chromium
 
 код для клоудфлейр воркера:
-
+```
 export default {
   async fetch(request) {
     const url = new URL(request.url);
@@ -28,12 +28,13 @@ export default {
     return fetch(newRequest);
   },
 };
-
+```
 формат .env:
-
+```
 MAX_CHAT_URL=ссылка на группу из веб версии макс
 AUTH_LOCAL_STORAGE=типа {"token:... и какая-то сессия, это через f12 искать} 
 TG_BOT_TOKEN=токен бота в тг
 TG_CHAT_ID=-103...(айди чата в тг(смотреть через веб версию тг или там в ссылках на чат есть через десктопную версию))
 TG_TOPIC_ID=(в какой именно раздел чата слать, если его убрать, то вроде просто будет кидать напрямую, так что необязателен)
 TG_API_URL=ссылка на ваш клоудфлейр воркер
+```
